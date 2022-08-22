@@ -1,1 +1,6 @@
-# Impact of Connectivity on Digital-Analog Variational Quantum Eigensolver
+# Analysis of Digital-Analog Variational Quantum Eigensolver
+
+## Simulation of H2 atom
+
+## Impact of Connectivity
+
