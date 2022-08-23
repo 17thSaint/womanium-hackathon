@@ -6,7 +6,9 @@ In the first section, we directly look at how the fully digital VQE compares to 
 ## Simulation of H2 atom
 In the file called "da_vqe.ipynb" there are a variety of functions which include a fully digital ansatz and a digital-analog ansatz.  The file labelled "h2code.ipynb" contains code that exectues the simulation of a hydrogen molecule.  Unfortuntely, with the time constraints I was not able to perform thorough analysis of the performance of the two different methods.  However, the code is built such that it can be utilized.
 
-There are some issues in that it appears that the fully digital ansatz chosen does not accurately calculate the eigenvalue of the hydrogen Hamiltonian.  More analysis needs to be done to discover why this is.  The code is built now to iterate the full digital block multiple times, the idea being that with sufficient depth, the correct value would be returned.  However, it is not clear that this procedure works either.  The digital-analog ansatz finds the correct eigenvalue even at depth one, already showing its power.
+There are some issues in that it appears that the fully digital ansatz chosen does not always accurately calculate the eigenvalue of the hydrogen Hamiltonian.  More analysis needs to be done to discover why this is.  The code is built now to iterate the full digital block multiple times, the idea being that with sufficient depth, the correct value would be returned.  However, it is not clear that this procedure works either.  The digital-analog ansatz finds the correct eigenvalue even at depth one, already showing its power.
+
+The code also shows that when just the multi-qubit CNOT gates are repeated, the correct eigenvalue is found in a oscillatory pattern as a function of the number of CNOT gates.  If the two CNOT gates are repeated 3n times where n is an integer, the then correct eigenvalue is found.  It is not clear at this point what causes this periodicity.
 
 ## Impact of Connectivity
 
